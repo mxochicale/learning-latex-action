@@ -24,7 +24,7 @@ jobs:
     - name: Upload
       run: |
         # configure git
-        git config --global user.name "Miguel Xochicale"
+        git config --global user.name "mxochicale"
         git config --global user.email "perez.xochicale@gmail.com"
         # setup ssh
         mkdir ~/.ssh
