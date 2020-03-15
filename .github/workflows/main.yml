@@ -29,7 +29,7 @@ jobs:
         # setup ssh
         mkdir ~/.ssh
         chmod 700 ~/.ssh
-        echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+	echo "${{ secrets.SECRET_PRIVATE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
         git clone --depth=1 --branch gh-pages git@github.com:mxochicale/using-latex-action.git "$GITHUB_WORKSPACE/deploy"
