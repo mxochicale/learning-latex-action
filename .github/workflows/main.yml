@@ -32,10 +32,10 @@ jobs:
         # setup ssh
         mkdir ~/.ssh
         chmod 700 ~/.ssh
-        echo "$DEPLOY_KEY" > ~/.ssh/id_rsa.pub
-        chmod 600 ~/.ssh/id_rsa.pub
-        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa.pub -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        git clone --depth=1 --branch gh-pages git@github.com:mxochciale/using-latex-action.git "$GITHUB_WORKSPACE/deploy"
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        git clone --depth=1 --branch gh-pages git@github.com:mxochicale/using-latex-action.git "$GITHUB_WORKSPACE/deploy"
         cp -f example/main.pdf "$GITHUB_WORKSPACE/deploy/example.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
         git add example.pdf
