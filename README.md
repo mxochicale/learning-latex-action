@@ -2,7 +2,7 @@
 Cheng XU has developed a super nice github action to build tex files called [latex-action](https://github.com/xu-cheng/latex-action).
 In this repository has the aim to document the necesary, and not obvious, dependencies to run examples in the [tutorials](https://github.com/xu-cheng/latex-tutorial) or even xu's [cv](https://github.com/xu-cheng/cv).
 
-[![GitHub Actions Status](https://github.com/mxochicale/using-latex-actions/workflows/Github%20Actions%20CI/badge.svg)](https://github.com/mxochicale/using-latex-action/actions)
+[![GitHub Actions Status](https://github.com/mxochicale/using-latex-action/workflows/Github%20Actions%20CI/badge.svg)](https://github.com/mxochicale/using-latex-action/actions)
 
 ## Logbook
 * [2020-03-15T2310]: The commit [518fff](https://github.com/mxochicale/using-latex-action/commit/518ffff66db0f74dc650746a6f873a0689b1dce3)
