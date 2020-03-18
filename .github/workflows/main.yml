@@ -27,7 +27,7 @@ jobs:
     - name: Check pdf files
       run: |
         file example/main.pdf | grep -q ' PDF '
-        file example/main.pdf | grep -q ' PDF '
+        file slides/main.pdf | grep -q ' PDF '
 
     - name: Upload
       run: |
