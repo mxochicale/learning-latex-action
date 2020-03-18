@@ -1,4 +1,4 @@
-name: Github Actions CI
+name: Compiling-TeX
 on:
   push:
     branches:
@@ -8,6 +8,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
+
     - name: Set up Git repository
       uses: actions/checkout@v1
 
@@ -17,8 +18,15 @@ jobs:
         root_file: main.tex
         working_directory: example
 
+    - name: Compile Slides
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+        working_directory: slides
+
     - name: Check pdf files
       run: |
+        file example/main.pdf | grep -q ' PDF '
         file example/main.pdf | grep -q ' PDF '
 
     - name: Upload
@@ -34,8 +42,9 @@ jobs:
         git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
         git clone --depth=1 --branch gh-pages git@github.com:mxochicale/using-latex-action.git "$GITHUB_WORKSPACE/deploy"
         cp -f example/main.pdf "$GITHUB_WORKSPACE/deploy/example.pdf"
+        cp -f slides/main.pdf "$GITHUB_WORKSPACE/deploy/slides.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
-        git add example.pdf
+        git add example.pdf slides.pdf
         git commit -m "[github actions] deploy"
         git push
       env:

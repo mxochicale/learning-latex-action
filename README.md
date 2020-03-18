@@ -1,6 +1,6 @@
 # Using latex-action
 
-[![GitHub Actions Status](https://github.com/mxochicale/using-latex-action/workflows/Github%20Actions%20CI/badge.svg)](https://github.com/mxochicale/using-latex-action/actions)
+[![GitHub Actions Status](https://github.com/mxochicale/using-latex-action/workflows/Compiling-TeX/badge.svg)](https://github.com/mxochicale/using-latex-action/actions)
 
 ## Intro
 Cheng XU has developed a super nice github action to build tex files called [latex-action](https://github.com/xu-cheng/latex-action).
