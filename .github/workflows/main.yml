@@ -30,12 +30,18 @@ jobs:
         root_file: cv.tex
         working_directory: cv
 
+    - name: Compile Thesis
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: thesis.tex
+        working_directory: thesis
 
     - name: Check pdf files
       run: |
         file example/main.pdf | grep -q ' PDF '
         file slides/main.pdf | grep -q ' PDF '
         file cv/cv.pdf | grep -q ' PDF '
+        file thesis/thesis.pdf | grep -q ' PDF '
 
     - name: Upload
       run: |
@@ -52,8 +58,9 @@ jobs:
         cp -f example/main.pdf "$GITHUB_WORKSPACE/deploy/example.pdf"
         cp -f slides/main.pdf "$GITHUB_WORKSPACE/deploy/slides.pdf"
         cp -f cv/cv.pdf "$GITHUB_WORKSPACE/deploy/cv.pdf"
+        cp -f thesis/thesis.pdf "$GITHUB_WORKSPACE/deploy/thesis.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
-        git add example.pdf slides.pdf cv.pdf
+        git add example.pdf slides.pdf cv.pdf thesis.pdf
         git commit -m "[github actions] deploy"
         git push
       env:
