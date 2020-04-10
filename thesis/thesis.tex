@@ -6,8 +6,9 @@
 %\usepackage[intoc]{nomencl}
 % glossaries
 \usepackage[toc, acronym]{glossaries} 
-
-
+\usepackage[style=ieee]{biblatex}
+\addbibresource{bibs/sample1.bib}
+ 
 % customize your general setup here
 \title{Super duper test title}
 \author{John Doe}
@@ -81,7 +82,7 @@
 %%%%%
 %\bibliographystyle{kclharvardv1}
 
-\bibliography{bibs/sample1} 
+\printbibliography
 %%%%% Declaration
 %\include{structure/declaration}
 %%%%% Appendix 
