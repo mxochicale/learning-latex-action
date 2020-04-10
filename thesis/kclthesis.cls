@@ -20,7 +20,7 @@
 \fi
 
 \ifkclthesis@kclharvardbib
-	\RequirePackage{natbib}
+	\RequirePackage{ieeetr}
 	\RequirePackage[UKenglish]{isodate}
 \fi
 
