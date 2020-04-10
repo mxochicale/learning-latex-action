@@ -1,7 +1,7 @@
 # vim: set filetype=perl:
 
 $pdf_mode = 1;
-set_tex_cmds('xelatex -shell-escape -synctex=1 -file-line-error %O %S');
+set_tex_cmds('-shell-escape -synctex=1 -file-line-error -interaction=nonstopmode %O %S');
 $max_repeat = 5;
 
 # File extensions to remove when cleaning
