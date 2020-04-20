@@ -1,4 +1,4 @@
-# Using latex-action
+# Using latex-action :octocat:
 
 [![GitHub Actions Status](https://github.com/mxochicale/using-latex-action/workflows/Compiling-TeX/badge.svg)](https://github.com/mxochicale/using-latex-action/actions)
 
@@ -26,24 +26,27 @@ git checkout -b gh-pages
 git push -u origin gh-pages
 ```
 
-## Milestones
-* 2020-04-10T13-57: The commit [d073f64](https://github.com/mxochicale/using-latex-action/commit/d073f64c88d9c57406fe17a75c05652539299731) passed
+## Logbook
+* :fireworks: 2020-04-20T1847: Creates a [PR](https://github.com/mxochicale/using-latex-action/pull/2) to commit changes to 
+example.tex and then to build [example.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/example.pdf)
+ 
+* :fireworks: 2020-04-10T13-57: The commit [d073f64](https://github.com/mxochicale/using-latex-action/commit/d073f64c88d9c57406fe17a75c05652539299731) passed
 ci creating [thesis.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/thesis.pdf) and available in the gh-pages 
 as https://mxochicale.github.io/using-latex-action/thesis.pdf
 
-* 2020-03-19T23-15: The commit [ccd018](https://github.com/mxochicale/using-latex-action/commit/ccd0187b8657787255d324ace9aa3f59bb6758a4) passed
+* :fireworks: 2020-03-19T23-15: The commit [ccd018](https://github.com/mxochicale/using-latex-action/commit/ccd0187b8657787255d324ace9aa3f59bb6758a4) passed
 ci creating [cv.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/cv.pdf) and available in the gh-pages 
 as https://mxochicale.github.io/using-latex-action/cv.pdf
 
-* 2020-03-18T22-13: The commit [13b9cb](https://github.com/mxochicale/using-latex-action/commit/13b9c6b296e89789e9d816a626f33430a9dcf0c3) 
+* :fireworks: 2020-03-18T22-13: The commit [13b9cb](https://github.com/mxochicale/using-latex-action/commit/13b9c6b296e89789e9d816a626f33430a9dcf0c3) 
 passed ci creating [slides.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/slides.pdf) and available in the gh-pages 
 as https://mxochicale.github.io/using-latex-action/slides.pdf
 
-* 2020-03-15T23-10: The commit [518fff](https://github.com/mxochicale/using-latex-action/commit/518ffff66db0f74dc650746a6f873a0689b1dce3)
+* :fireworks: 2020-03-15T23-10: The commit [518fff](https://github.com/mxochicale/using-latex-action/commit/518ffff66db0f74dc650746a6f873a0689b1dce3)
 passed the ci creating [example.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/example.pdf) and available in the gh-pages 
 as https://mxochicale.github.io/using-latex-action/example.pdf
 
-* 2020-03-15T17-08: The commit [9c788fc](https://github.com/mxochicale/trying-latex-action/commit/9c788fc969b5944a70581bcf7ff425325b45396a) passed 
+* :fireworks: 2020-03-15T17-08: The commit [9c788fc](https://github.com/mxochicale/trying-latex-action/commit/9c788fc969b5944a70581bcf7ff425325b45396a) passed 
 the test using '@actions/upload-release-asset' which upload a main.zip to the [Github Release](https://github.com/mxochicale/trying-latex-action/actions/runs/56217321). master.zip contains the PDF file.
  
 ## License 
