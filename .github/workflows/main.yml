@@ -36,12 +36,19 @@ jobs:
         root_file: thesis.tex
         working_directory: thesis
 
+    - name: Compile Poster
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+        working_directory: poster
+
     - name: Check pdf files
       run: |
         file example/main.pdf | grep -q ' PDF '
         file slides/main.pdf | grep -q ' PDF '
         file cv/cv.pdf | grep -q ' PDF '
         file thesis/thesis.pdf | grep -q ' PDF '
+        file poster/main.pdf | grep -q ' PDF '
 
     - name: Upload
       run: |
@@ -59,8 +66,9 @@ jobs:
         cp -f slides/main.pdf "$GITHUB_WORKSPACE/deploy/slides.pdf"
         cp -f cv/cv.pdf "$GITHUB_WORKSPACE/deploy/cv.pdf"
         cp -f thesis/thesis.pdf "$GITHUB_WORKSPACE/deploy/thesis.pdf"
+        cp -f poster/main.pdf "$GITHUB_WORKSPACE/deploy/poster.pdf"
         cd "$GITHUB_WORKSPACE/deploy"
-        git add example.pdf slides.pdf cv.pdf thesis.pdf
+        git add example.pdf slides.pdf cv.pdf thesis.pdf poster.pdf
         git commit -m "[github actions] deploy"
         git push
       env:
