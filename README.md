@@ -12,21 +12,29 @@ xu's [cv](https://github.com/xu-cheng/cv) and a thesis template.
 ## Setting it up
 1. Add `shh-rsa` key in https://github.com/settings/keys following [the documentation](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) in github.
 
-2. Create a `DEPLOY_KEY` variable in https://github.com/mxochicale/using-latex-action/settings/secrets.
-See `~/.ssh/id_rsa` for the key which looks like:  
+
+2. Create a new secret variable called `DEPLOY_KEY` in   
+https://github.com/mxochicale/using-latex-action/settings/secrets   
+Where the value is taken from `id_rsa` with 
+`vim ~/.ssh/id_rsa` which looks like:  
 ```
 -----BEGIN RSA PRIVATE KEY-----
-~
+...
 -----END RSA PRIVATE KEY-----
 ```
 
 3. Create a gh-pages branch for the pdf files [(see more)](https://www.freecodecamp.org/forum/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222).
 ```
 git checkout -b gh-pages
-git push -u origin gh-pages
+rm -rf * ~.git
+git commit -m 'clean gh-pages branch'
+git push origin gh-pages
 ```
 
 ## Logbook
+* :fireworks: 2020-08-31T1522: The commit [3f56c3](https://github.com/mxochicale/learning-latex-action/commit/3f56c3afc27e2a6a1d0d764734d2ab666565bfb5)
+adds [poster.tex](poster/main.tex) and figures to then build [poster.pdf](https://github.com/mxochicale/learning-latex-action/blob/gh-pages/poster.pdf)
+ 
 * :fireworks: 2020-04-20T1847: Creates a [PR](https://github.com/mxochicale/using-latex-action/pull/2) to commit changes to 
 example.tex and then to build [example.pdf](https://github.com/mxochicale/using-latex-action/blob/gh-pages/example.pdf)
  
