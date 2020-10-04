@@ -25,10 +25,11 @@ Where the value is taken from `id_rsa` with
 
 3. Create a gh-pages branch for the pdf files [(see more)](https://www.freecodecamp.org/forum/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222).
 ```
-git checkout -b gh-pages
-rm -rf * ~.git
-git commit -m 'clean gh-pages branch'
-git push origin gh-pages
+git checkout -b generated-pdfs
+rm -rf * README.md .github .gitignore *swp ~.git 
+git add -A
+git commit -m 'clean generated-pdfs branch'
+git push origin generated-pdfs
 ```
 
 ## Logbook

@@ -61,7 +61,7 @@ jobs:
         echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        git clone --depth=1 --branch gh-pages git@github.com:mxochicale/using-latex-action.git "$GITHUB_WORKSPACE/deploy"
+        git clone --depth=1 --branch generated-pdfs git@github.com:mxochicale/learning-latex-action.git "$GITHUB_WORKSPACE/deploy"
         cp -f example/main.pdf "$GITHUB_WORKSPACE/deploy/example.pdf"
         cp -f slides/main.pdf "$GITHUB_WORKSPACE/deploy/slides.pdf"
         cp -f cv/cv.pdf "$GITHUB_WORKSPACE/deploy/cv.pdf"
