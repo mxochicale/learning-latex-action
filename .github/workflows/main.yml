@@ -13,25 +13,25 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Compile Example
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
         working_directory: example
 
     - name: Compile Slides
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
         working_directory: slides
 
     - name: Compile Thesis
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: thesis.tex
         working_directory: thesis
 
     - name: Compile Poster
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
         working_directory: poster
